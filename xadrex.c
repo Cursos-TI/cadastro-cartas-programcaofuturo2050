@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int main(){
-int População;
+char População[50];
 float Área;
-PIB
-Número de pontos turísticos
-  
+int PIB, Número_de_pontos_turísticos;
+  printf("Digite a Populção que deseja escolher: \n");
+  scanf("%s", &População);
 
 
 
