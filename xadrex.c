@@ -14,6 +14,7 @@ int pontos_1 = 50;
 
   printf("Estado: %c\n", Estado_1);
   printf("Código: %i\n", codigo_1);
+  printf("Cidade: %s\n", Cidade);
   printf("Habitantes: %.2f\n", Habitacao_1);
   printf("Área: %.2fkm²\n", area_1);
   printf("PIB: %.2f\n", PIB_1);
