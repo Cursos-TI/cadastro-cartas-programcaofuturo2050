@@ -2,16 +2,16 @@
 
 int main(){
 
-  char estado_1[5];        
-  char codigo_1[10];      
-  char cidade_1[20];        
+  char estado_1[3];        
+  char codigo_1[5];      
+  char cidade_1[50];        
   int populacao_1, pontos_1;
   float area_1, pib_1;
   
   printf("CRIE A SUA PRÓXIMA CARTA. \n");
 
   printf("Digite o Estado 01: \n");
-  scanf("%s", &estado_1);
+  scanf("%S", &estado_1);
   printf("Digite o Código da carta 01: \n");
   scanf("%s", &codigo_1);
   printf("Digite a Cidade 01: \n");
@@ -67,10 +67,18 @@ int main(){
   printf("Cidade: %s\n", cidade_2);  
   printf("População: %d\n", populacao_2);
   printf("Área: %.2f km²\n", area_2);
-  printf("PIB: R$ %f bilhões\n", pib_2);
+  printf("PIB: R$ %.2f bilhões\n", pib_2);
   printf("Pontos Turísticos: %d\n", pontos_2);
   printf("A Densidade Demografica é: %2.f hab/km²\n", densidade_2); 
   printf("O PIB PER CAPITA É: %f\n", pibp_2);
-return 0;
+
+  if (pib_1 > pib_2){
+    printf("Parabéns, sua carta tem %.2f prontos. Você ganhou.\n!", &pib_1);
+  
+  } else {
+        printf("Infelizmente, a carta do seu adversário tem %.2f pontos. Tente novamente.\n", &pib_2);
+  }
+  
+  return 0;
   
 }
