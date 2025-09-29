@@ -1,12 +1,17 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
 
 int main() {
     char estado_1[3];        
     char codigo_1[5];      
     char cidade_1[50];        
-    int populacao_1, pontos_1;
+    int populacao_1, pontos_1, escolhajogador1;
     float area_1, pib_1;
-
+    
+    printf("### Jogo Trunfo ###\n");
     printf("CRIE A SUA PRÓXIMA CARTA. \n");
 
     printf("Digite o Estado 01: \n");
@@ -37,11 +42,12 @@ int main() {
     printf("Pontos Turísticos: %d\n", pontos_1);
     printf("Densidade Demográfica: %.2f hab/km²\n", densidade_1); 
     printf("PIB per capita: R$ %.2f\n", pibp_1);
+    
 
     char estado_2[3];        
     char codigo_2[5];      
     char cidade_2[50];        
-    int populacao_2, pontos_2;
+    int populacao_2, pontos_2, escolhajogador2;
     float area_2, pib_2;
 
     printf("\nCRIE A SUA PRÓXIMA CARTA. \n");
@@ -83,6 +89,65 @@ int main() {
     } else {
         printf("Empate! Ambas as cartas têm o mesmo PIB.\n");
     }
+    
+
+    printf("Jogador 1, escolha uma opção para comparação com o seu adversário: \n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    scanf("%d", &escolhajogador1);
+    
+    switch (escolhajogador1) {
+        case 1:
+            printf("Jogador 1 escolheu - População\n");
+            break;
+        case 2:
+            printf("Jogador 1 escolheu - Área\n");
+            break;
+        case 3:
+            printf("Jogador 1 escolheu - PIB\n");
+            break;
+        case 4:
+            printf("Jogador 1 escolheu - Pontos Turísticos\n");
+            break;
+        default:
+            printf("Opção inválida!!\n");
+            return 1;
+    }
+    printf("Jogador 2, escolha uma opção para comparação com o seu adversário: \n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Pontos Turísticos\n");
+    scanf("%d", &escolhajogador2);
+
+    switch (escolhajogador2) {
+        case 1:
+            printf("Jogador 2 escolheu - População\n");
+            break;
+        case 2:
+            printf("Jogador 2 escolheu - Área\n");
+            break;
+        case 3:
+            printf("Jogador 2 escolheu - PIB\n");
+            break;
+        case 4:
+            printf("Jogador 2 escolheu - Pontos Turísticos\n");
+            break;
+        default:
+            printf("Opção inválida!!\n");
+            return 1;
+    }
+
+    if ((escolhajogador1 == 1) && (escolhajogador2 == 1)) { 
+        printf("Parabéns! Jogador 1 ganhou essa rodada.\n");
+    } else if ((escolhajogador1 == 2) && (escolhajogador2 == 2)) {
+        printf("Parabéns! Jogador 1 ganhou essa rodada.\n");
+    } else {
+        printf("### Parabéns Jogador 2 ganhou essa rodada!\n");
+    }
 
     return 0;
 }
+
